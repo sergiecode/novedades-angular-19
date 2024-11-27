@@ -1,59 +1,81 @@
-# Angular19News
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.0.
+## NOVEDADES DE ANGULAR 19
 
-## Development server
+### PUNTOS DESTACADOS
 
-To start a local development server, run:
+1.  **Hidratación incremental**: Carga de componentes UI de forma perezosa según la interacción del usuario.
+2.  **Reproducción de eventos**: Garantiza la continuidad de las acciones del usuario en aplicaciones renderizadas del lado del servidor (SSR).
+3.  **Modos de renderizado por ruta**: Optimización del renderizado por ruta (servidor, cliente, prerenderizado).
+4.  **Reactividad mejorada**: APIs estabilizadas, nuevos `linkedSignal` y primitivos de recursos.
+5.  **Herramientas para desarrolladores**: Reemplazo de módulos en caliente (HMR), detección de importaciones no utilizadas, variables locales en plantillas.
+6.  **Actualizaciones de Material y CDK**: Drag & drop en 2D, selector de tiempo y temas avanzados.
+7.  **Angular sin zones**: Aplicaciones más rápidas sin `zone.js`.
 
-```bash
-ng serve
-```
+----------
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### HIDRATACIÓN INCREMENTAL
 
-## Code scaffolding
+-   **Qué es**: Hidrata solo las partes de la app que los usuarios interactúan usando `@defer`.
+-   **Uso**: Reduce la carga inicial de JavaScript en aplicaciones SSR.
+-   **Resultado**: Tiempos de carga más rápidos y menor consumo de recursos.
+-   **Beneficio clave**: Mejora el rendimiento sin sacrificar la interactividad.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+----------
 
-```bash
-ng generate component component-name
-```
+### REPRODUCCIÓN DE EVENTOS
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+-   **Problema resuelto**: Captura y reproduce acciones de usuario durante las interrupciones de la hidratación en apps SSR.
+-   **Resultado**: Ningún clic o input se pierde, garantizando una experiencia fluida.
+-   **Beneficio clave**: Evita la frustración por botones no responsivos o acciones omitidas.
 
-```bash
-ng generate --help
-```
+----------
 
-## Building
+### MODOS DE RENDERIZADO POR RUTA
 
-To build the project run:
+-   **Nueva funcionalidad**: Configura rutas específicas para renderizar en servidor, cliente o prerenderizado.
+-   **Resultado**: Rendimiento ajustado con rutas optimizadas.
+-   **Beneficio clave**: Mejor experiencia del usuario y menor carga en el servidor.
 
-```bash
-ng build
-```
+----------
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### REACTIVIDAD MEJORADA
 
-## Running unit tests
+¡La gestión de estado evoluciona con señales y recursos!
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+-   **APIs estabilizadas**: Inputs, outputs y consultas de vista ahora son estables.
+-   **Nuevos primitivos**:
+    -   `linkedSignal`: Relaciona estados dependientes fácilmente.
+    -   `resource`: Maneja operaciones asíncronas dentro del gráfico de señales.
+-   **Resultado**: Menos código repetitivo para la gestión de estado y async.
+-   **Beneficio clave**: Simplificación de relaciones de estado complejas.
 
-```bash
-ng test
-```
+----------
 
-## Running end-to-end tests
+### MEJORAS PARA LA CALIDAD DE VIDA DEL DESARROLLADOR
 
-For end-to-end (e2e) testing, run:
+-   **HMR**: Actualizaciones instantáneas de estilos y plantillas sin recargar la página.
+-   **Advertencias de importaciones no utilizadas**: Angular CLI detecta y elimina importaciones innecesarias.
+-   **Variables locales en plantillas**: Declara variables directamente en las plantillas.
+-   **Resultado**: Desarrollo más rápido y bases de código más limpias.
+-   **Beneficio clave**: Mayor eficiencia y menos tareas repetitivas.
 
-```bash
-ng e2e
-```
+----------
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### ACTUALIZACIONES DE MATERIAL Y CDK
 
-## Additional Resources
+¡Componentes personalizables y mejores herramientas!
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+-   **Selector de tiempo**: Componente accesible integrado.
+-   **Drag & drop en 2D**: Movimiento libre entre filas y columnas.
+-   **API de temas mejorada**: Usa `@mat.theme` para una tematización más simple y reutilizable.
+-   **Resultado**: Mejor diseño UX con menos esfuerzo de implementación.
+-   **Beneficio clave**: Capacidades UI avanzadas con mínima carga.
+
+----------
+
+### ANGULAR SIN ZONES
+
+-   **Qué es nuevo**: Soporte experimental para apps sin `zone.js`.
+-   **Resultado**: Mejor rendimiento SSR y tamaño reducido del bundle de JavaScript.
+-   **Cómo funciona**: Reemplaza `zone.js` con un operador de RxJS para notificar cuando Angular termina de renderizar.
+-   **Beneficio clave**: Apps listas para el futuro con arquitectura simplificada.
