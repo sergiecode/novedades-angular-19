@@ -1,0 +1,19 @@
+
+
+@defer (hidrate on interaction) {
+    // El elemento del botón permanecerá deshidratado (no interactivo)
+    // hasta que el usuario interactúe con él, como haciendo clic.
+    <button (click)="agregarAlCarrito()">Añadir al carrito</button>
+}
+
+@defer (hidrate on viewport) {
+    // El componente "lista-de-productos" solo se hidratará cuando sea visible
+    // en el viewport del usuario (por ejemplo, al desplazarse hacia esta sección).
+    <lista-de-productos></lista-de-productos>
+}
+
+@defer (hidrate timer(2000)) {
+  // La hidratación del componente "publicidad" se retrasará 2 segundos
+  // después de que la página haya cargado.
+  <publicidad></publicidad>
+}
